@@ -27,16 +27,10 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact</a>
                 <div class="dropdown-menu rounded-0 m-0">
                     <a href="{{route('contact.index')}}" class="dropdown-item">All Contact</a>
-                    
+
                 </div>
             </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Instructor</a>
-                <div class="dropdown-menu rounded-0 m-0">
-                    <a href="{{route('instructor.index')}}" class="dropdown-item">All Instructors</a>
-                    <a href="{{route('instructor.create')}}" class="dropdown-item">Create Instructor</a>
-                </div>
-            </div>
+
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
                 <div class="dropdown-menu rounded-0 m-0">
@@ -51,11 +45,16 @@
                     <a href="{{route('testimonial.create')}}" class="dropdown-item">Create Testimonial</a>
                 </div>
             </div>
+
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">users</a>
                 <div class="dropdown-menu rounded-0 m-0">
-                    <a href="{{route('user.index')}}" class="dropdown-item">All Users</a>
-                    <a href="{{route('user.create')}}" class="dropdown-item">Create User</a>
+                    <a href="{{route('instructor.index')}}" class="dropdown-item">All Instructors</a>
+                    <a href="{{route('instructor.create')}}" class="dropdown-item">Create Instructor</a>
+                    <a href="{{route('student.index')}}" class="dropdown-item">All Students</a>
+                    <a href="{{route('student.create')}}" class="dropdown-item">Create Student</a>
+                    <a href="{{route('user.index')}}" class="dropdown-item">All Admins</a>
+                    <a href="{{route('user.create')}}" class="dropdown-item">Create Admin</a>
                 </div>
             </div>
 

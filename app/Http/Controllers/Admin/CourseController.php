@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Instructor;
+use App\Models\Student;
 use App\Models\user;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,8 +16,8 @@ class CourseController extends BaseController
 
     protected string $filesPath = "assets/images/course";
     protected string $model = Course::class;
-    protected array $relationModels = [Instructor::class, Category::class];
-    protected array $relations = ['instructor','category'];
+    protected array $relationModels = [Instructor::class, Category::class,Student::class];
+    protected array $relations = ['instructor','category','students'];
 
     public function __construct() {
         $this->columns = (new Course())->getFillable();

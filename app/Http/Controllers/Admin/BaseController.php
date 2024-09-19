@@ -108,8 +108,6 @@ class BaseController extends Controller
                 $relationData[strtolower(class_basename($relationModel))] = $relationModel::get();
             }
         }
-        // dd($relationData);
-
         return $relationData;
     }
 }

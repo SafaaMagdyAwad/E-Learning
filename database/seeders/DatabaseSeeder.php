@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Course;
 use App\Models\Instructor;
 use App\Models\Service;
+use App\Models\Student;
 use App\Models\Testimonial;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -26,7 +27,7 @@ class DatabaseSeeder extends Seeder
         Testimonial::factory(20)->create();
         Contact::factory(20)->create();
         User::factory(20)->create();
-
-
+        Student::factory(20)->create();
+        
     }
 }
