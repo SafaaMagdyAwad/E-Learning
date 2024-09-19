@@ -1,0 +1,11 @@
+@extends('layouts.main')
+@section('content')
+    @push('name')
+    Testimonial
+    @endpush
+    @push('LinkName')
+    testimonial
+    @endpush
+    @include('includes.header')
+    @include('includes.testimonial')
+@endsection
