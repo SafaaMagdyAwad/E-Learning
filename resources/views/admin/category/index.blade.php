@@ -39,9 +39,9 @@ All Categories
 
     </tr>
     @endforeach
-
-  </tbody>
+</tbody>
 </table>
+{{ $data->links() }}
 </div>
 
 

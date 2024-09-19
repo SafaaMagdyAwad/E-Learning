@@ -12,9 +12,10 @@ use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
+
     public function index(){
         $services=Service::query()->where('isPublished',1)->take(4)->get();
-        $categories=Category::query()->take(4)->get();
+        $categories=Category::query()->with(['courses'=> function ($query){ $query->where('isPublished', 1);}])->take(4)->get();
         $cources=Course::query()->with(['category','instructor'])->where('isPublished',1)->where('isPopular',1)->take(3)->get();
         $testimonials=Testimonial::query()->where('isPublished',1)->take(5)->get();
         return view('index',compact('services','categories','cources','testimonials'));
@@ -29,7 +30,7 @@ class PublicController extends Controller
     }
     public function courses(){
         $cources=Course::query()->where('isPublished',1)->with(['category','instructor'])->where('isPopular',1)->get();
-        $categories=Category::query()->take(4)->get();
+        $categories=Category::query()->with(['courses'=> function ($query){ $query->where('isPublished', 1);}])->take(4)->get();
         $testimonials=Testimonial::query()->where('isPublished',1)->take(5)->get();
         return view('courses',compact('cources','categories','testimonials'));
     }

@@ -33,7 +33,7 @@ class BaseController extends Controller
         if (!empty($this->relations)) {
             $model = $model::with($this->relations);
         }
-        $data = $model->get();
+        $data = $model->simplePaginate(5);
 
         return view('admin.' . $this->getViewName('index'), compact('data'));
     }

@@ -18,7 +18,7 @@
                                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                         style="margin: 1px;">
                                         <h5 class="m-0">{{ $category->title }}</h5>
-                                        <small class="text-primary">49 Courses not yet safaa</small>
+                                        <small class="text-primary">{{ $category->courses->count() }} Courses</small>
                                     </div>
                                 </a>
                             </div>
@@ -36,7 +36,7 @@
                             <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                 style="margin:  1px;">
                                 <h5 class="m-0">{{ $category->title }}</h5>
-                                <small class="text-primary">49 Courses</small>
+                                <small class="text-primary">{{ $category->courses->count() }} Courses</small>
                             </div>
                         </a>
                     </div>

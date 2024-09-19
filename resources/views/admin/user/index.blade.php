@@ -27,7 +27,7 @@
                         <td scope="row">  {{ $user->id }}</td>
                         <td scope="row">{{ $user->name }}</td>
                         <td scope="row">{{ $user->email }}</td>
-                       
+
                         <td><a href="{{ route('user.edit',$user) }}" class="btn btn-light">Edit</a></td>
                         <td>
                             <form id="" action="{{ route('user.destroy', $user) }}" method="POST">
@@ -40,8 +40,8 @@
 
                     </tr>
                 @endforeach
-
             </tbody>
         </table>
+        {{ $data->links() }}
     </div>
 @endsection
